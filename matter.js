@@ -211,3 +211,4 @@ function setWindowSize() {
 let m = runMatter();
 setWindowSize();
 $(window).resize(debounce(setWindowSize, 250));
+
