@@ -43,14 +43,77 @@
  <div class="pointer-events-auto flex gap-4 items-center justify-between mx-8 mt-8 absolute top-1/2-translate-y-1/2 -right-0 ">
     <a href="tel:#91 9922871041"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 </a>
-<div class="sun-mode" data-theme="light">
-  <a>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-</a>
+<!-- <?xml version="1.0" encoding="utf-8"?><Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!-- <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dark" class="moon-mode" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.8a9.796 9.796 0 0 1-1.245-19.513l1.286-.163-.843.984a8.285 8.285 0 0 0 8.519 13.383l1.252-.347-.696 1.096A9.755 9.755 0 0 1 12 21.8zM9.647 3.526a8.796 8.796 0 1 0 9.031 14.196 9.048 9.048 0 0 1-1.178.078A9.293 9.293 0 0 1 9.647 3.526z"/><path fill="none" d="M0 0h24v24H0z"/></svg> -->
+<!-- Sun Button -->
+<div id="sunToggle" style="cursor:pointer;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
 </div>
 
-<!-- <?xml version="1.0" encoding="utf-8"?><Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.8a9.796 9.796 0 0 1-1.245-19.513l1.286-.163-.843.984a8.285 8.285 0 0 0 8.519 13.383l1.252-.347-.696 1.096A9.755 9.755 0 0 1 12 21.8zM9.647 3.526a8.796 8.796 0 1 0 9.031 14.196 9.048 9.048 0 0 1-1.178.078A9.293 9.293 0 0 1 9.647 3.526z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+<!-- Moon Button -->
+<div id="moonToggle" style="cursor:pointer;">
+  <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+    <path d="M12 21.8a9.796 9.796 0 0 1-1.245-19.513l1.286-.163-.843.984a8.285 8.285 0 0 0 8.519 13.383l1.252-.347-.696 1.096A9.755 9.755 0 0 1 12 21.8z"/>
+    <path fill="none" d="M0 0h24v24H0z"/>
+  </svg>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const html = document.documentElement;
+
+  const applyTheme = (theme) => {
+    html.setAttribute("data-theme", theme);
+
+    if (theme === "dark") {
+      document.body.style.background = "#0d0d0d";
+      document.body.style.color = "#ffffff";
+
+      document.querySelectorAll(".project-card").forEach(card => {
+        card.style.background = "#1a1a1a";
+        card.style.color = "#ffffff";
+        card.style.border = "1px solid #333333";
+      });
+
+      document.querySelectorAll(".section-block, .latest-works").forEach(section => {
+        section.style.background = "#0d0d0d";
+        section.style.color = "#ffffff";
+      });
+
+    } else {
+      document.body.style.background = "#ffffff";
+      document.body.style.color = "#000000";
+
+      document.querySelectorAll(".project-card").forEach(card => {
+        card.style.background = "#f2f2f2";
+        card.style.color = "#000000";
+        card.style.border = "1px solid #cccccc";
+      });
+
+      document.querySelectorAll(".section-block, .latest-works").forEach(section => {
+        section.style.background = "#ffffff";
+        section.style.color = "#000000";
+      });
+    }
+  };
+
+  document.getElementById("sunToggle").addEventListener("click", () => applyTheme("light"));
+  document.getElementById("moonToggle").addEventListener("click", () => applyTheme("dark"));
+});
+</script>
+
 <a href="https://wa.me/+91 9922871041?text=I'Hi, How Are You? "target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp" class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
 </a>
 </div>
@@ -141,12 +204,23 @@
       </div>
 </div>
 <div class="relative self-center after:content-[''] after:absolute after:w-[4px] after:h-6 after:bg-[#444] after:left-1/2 after:-translate-x-1/2 after:top-2/3">
-    <button class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] from-10%  via-sky-500 via-30% to-[#242c71e6] to-90% relative hover:scale-110 ease-in-out duration:100 group self-center mb-20 after:content-['']after:absolute after:w-[2px] after:h-4 after:bg-red-400">Latest Works
+    <button id="scrollToLatest"  class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] from-10%  via-sky-500 via-30% to-[#242c71e6] to-90% relative hover:scale-110 ease-in-out duration:100 group self-center mb-20 after:content-['']after:absolute after:w-[2px] after:h-4 after:bg-red-400">Latest Works
     <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" width="44" height="44" viewBox="0 0 100 100" class="absolute rotate-90 left-1/2 -translate-x-1/2 top-7 group-hover:top-9 ease-in-out duration-100 "><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z" fill="#fff" fill-opacity="1" stroke="white" stroke-width="2"  marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
-</button>
+<script>
+document.getElementById("scrollToLatest").addEventListener("click", () => {
+    const section = document.getElementById("latest-works");
+    if (!section) return;
+
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+</script>
+ </button>
 </div>
 </section>
-    <section class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16">
+    <section id="latest-works" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16">
       <h2
         class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]"
       >
@@ -958,14 +1032,16 @@ Skills: Python Backend Frameworks (Flask/FastAPI/Django) | REST API Design | Dat
             >
               <img
                 class="shrink-0 w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full drop-shadow-[0_0px_80px_rgba(59,130,246,1)]"
-                src="/assets/images/kira.webp"
+                src="/assets/images/company logo/folsum matt.jpeg"
                 alt="testimonial 3"
               />
               <div
                 class="testimonial-text ml-6 text-left pt-6 md:pt-16 relative"
               >
                 <p class="text-sm md:text-base mb-2">
-                  “shubham jatti was a wonderful developer to work with! He anticipated
+                  Mi nombre es  Matt Steinberg Soy de…  Argentina!!!
+                 My name is Matt Steinberg. I'm from… Argentina 
+                 “shubham jatti was a wonderful developer to work with! He anticipated
                   everything I need to consider for my website. He also went the
                   extra mile and added details that I hadn't considered! He is
                   helping my business grow, and I will definitely work with him
@@ -974,10 +1050,10 @@ Skills: Python Backend Frameworks (Flask/FastAPI/Django) | REST API Design | Dat
                 <h2
                   class="text-right text-[#459bd5] font-bold text-2xl md:text-4xl"
                 >
-                  Kira Bragg
-                </h2>
+                  Matt Steinberg
+                  </h2>
                 <h5 class="text-right text-[#459bd5] text-base md:text-lg">
-                  English Mentor
+                  Senior Talent Acquisition professional at FLOSUM 
                 </h5>
               </div>
             </div>
@@ -1024,9 +1100,9 @@ Skills: Python Backend Frameworks (Flask/FastAPI/Django) | REST API Design | Dat
                 class="testimonial-text ml-6 text-left pt-6 md:pt-16 relative"
               >
                 <p class="text-sm md:text-base mb-2">
-                  “I am work at  College of Contract Management UK as a HR & Executive Secretary
-                  i worked with shubham jatti at pune office he is very good at his work nice guy and 
-                  very talented person individual”
+                 “I work at the College of Contract Management UK as an HR & Executive Secretary. 
+                 I collaborated with Shubham Jatti at the Pune office and found him to be highly competent, professional,
+                  and talented.”
                 </p>
                 <h2
                   class="text-right text-[#459bd5] font-bold text-2xl md:text-4xl"
