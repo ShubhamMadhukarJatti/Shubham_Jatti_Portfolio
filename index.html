@@ -1999,14 +1999,37 @@ Successfully built a fully functional microservice capable of handling financial
       >
         Let's Connect
       </h2>
-      <div class="flex flex-col md:flex-row items-center mt-5">
+      <!-- <div class="flex flex-col md:flex-row items-center mt-5">
         <div class="w-min-32">
           <img src="./assets/images/contact-me.svg" alt="phone" />
         </div>
         <div class="flex flex-col md:flex-row items-center mt-5">
         <div class="w-min-32">
           <img src="./assets/images/unnamed.png" alt="phone" />
-        </div>
+        </div> -->
+        <div class="flex items-center justify-center gap-5 mt-8 px-6 flex-nowrap">
+
+  <!-- Left: icon (smaller, centered) -->
+  <img
+    src="./assets/images/contact-me.svg"
+    alt="Contact"
+    class="w-16 opacity-60 flex-shrink-0"
+  />
+
+  <!-- Center: main image (reduced + centered) -->
+  <img
+    src="./assets/images/unnamed.png"
+    alt="Main visual"
+    class="w-40 flex-shrink-0"
+  />
+
+  <!-- Right: contact form (compact) -->
+  <div class="w-[360px] flex-shrink-0">
+    <!-- your form here -->
+  </div>
+
+</div>
+
         <form class="w-full" name="contactUS" netlify>
           <label
             for="name"
